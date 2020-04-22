@@ -20,14 +20,5 @@ public class GoogleSearchPage extends Page
         submitGoogle("q");
     }
 
-//    public boolean isSuccessfull() {
-//        return SUCCESSFUL_LOGIN.equals(getResults());
-//    }
-//
-//    public String getResults() {
-//        return getText(RESULT_SELECTOR);
-//    }
-
-
 
 }

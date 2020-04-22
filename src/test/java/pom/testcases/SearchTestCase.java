@@ -1,5 +1,6 @@
 package pom.testcases;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import pom.library.Browser;
@@ -18,6 +19,7 @@ public class SearchTestCase {
 
     }
 
+    @Ignore
     @Test
     public void loginWithFirefox() {
         WebDriver firefox = browser.getFirefox();
@@ -27,10 +29,12 @@ public class SearchTestCase {
 
     private void search(WebDriver driver) {
         final GoogleSearchPage googleSearchPage = new GoogleSearchPage(driver);
-        final GoogleResultsPage googleResultsPage = new GoogleResultsPage(driver);
-        final KnowledgeHutPage knowledgeHutPage = new KnowledgeHutPage(driver);
         googleSearchPage.search("knowledgehut");
+
+        final GoogleResultsPage googleResultsPage = new GoogleResultsPage(driver);
         googleResultsPage.clickSearchResult();
+
+        final KnowledgeHutPage knowledgeHutPage = new KnowledgeHutPage(driver);
 
         if (!knowledgeHutPage.isSuccessfull())
             knowledgeHutPage.screenshot("chrome error");

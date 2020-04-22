@@ -2,8 +2,7 @@ package pom.pages;
 
 import org.openqa.selenium.WebDriver;
 
-public class KnowledgeHutPage extends Page
-{
+public class KnowledgeHutPage extends Page {
     public static final String CORRECT_TITLE = "Professional Certification Courses, Classroom And Virtual Trainings";
 
     public KnowledgeHutPage(WebDriver driver) {
@@ -18,5 +17,4 @@ public class KnowledgeHutPage extends Page
     public boolean isSuccessfull() {
         return CORRECT_TITLE.equals(getTitle());
     }
-
 }

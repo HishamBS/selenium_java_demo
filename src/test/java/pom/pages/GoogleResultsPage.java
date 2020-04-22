@@ -2,8 +2,7 @@ package pom.pages;
 
 import org.openqa.selenium.WebDriver;
 
-public class GoogleResultsPage extends Page
-{
+public class GoogleResultsPage extends Page {
 
     public GoogleResultsPage(WebDriver driver) {
 
@@ -11,7 +10,7 @@ public class GoogleResultsPage extends Page
     }
 
     public void clickSearchResult(){
-        clickGoogleFirstResult();
+        clickGoogleFirstResult("Knowledgehut");
     }
 
 }

@@ -15,8 +15,7 @@ public abstract class Page {
         this.url = url;
     }
 
-    public Page(WebDriver driver)
-    {
+    public Page(WebDriver driver) {
         this(driver,"");
     }
 
@@ -36,9 +35,8 @@ public abstract class Page {
     protected void submitGoogle(String selector) {
         driver.findElement(By.name(selector)).submit();
     }
-    protected void clickGoogleFirstResult() {
-        driver.findElement(By.partialLinkText("Knowledgehut"))
-                .click();
+    protected void clickGoogleFirstResult(String text) {
+        driver.findElement(By.partialLinkText(text)).click();
 //        driver.findElement(By.xpath("//*[@id=\"rso\"]/div[1]/div/div/div[1]/a/h3"))
 //       .click();
     }
